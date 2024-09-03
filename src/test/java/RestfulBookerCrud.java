@@ -81,45 +81,5 @@ public class RestfulBookerCrud {
         response.then().assertThat().statusCode(200);
 
     }
-    /*@Test
-    public void putEmployeeTest() throws JsonProcessingException {
-        RestAssured.baseURI = "https://dummy.restapiexample.com/api/v1";
-        Employee employee = new Employee();
-        employee.setName("Updated");
-        employee.setSalary("3000");
-        employee.setAge("28");
-
-        ObjectMapper mapper = new ObjectMapper();
-        String payload = mapper.writeValueAsString(employee);
-        System.out.println(payload);
-
-        Response response = RestAssured
-                .given().contentType(ContentType.JSON).accept(ContentType.JSON).body(payload)
-                .and().pathParam("id", "1")
-                .when().put("/update/{id}");
-
-        //PUT /UPDATE/1
-        response.then().log().body();
-        response.then().assertThat().statusCode(200);
-        response.then().assertThat().body("message",Matchers.equalTo("Succesfully! Record has been updated."));
-        response.then().assertThat().body("data.name",Matchers.equalTo(employee.getName()));
-        response.then().assertThat().body("data.salary",Matchers.equalTo(employee.getSalary()));
-        response.then().assertThat().body("data.age",Matchers.equalTo(employee.getAge()));
-
-    }
-
-    @Test
-    public void deleteEmployee()
-    {
-        RestAssured.baseURI = "https://dummy.restapiexample.com/api/v1";
-        Response response = RestAssured
-                .given().pathParam("id","4")
-                .when().delete("/delete/{id}");
-        response.then().log().body();
-        response.then().assertThat().statusCode(200);
-        response.then().assertThat().body("data",Matchers.equalTo("4"));
-        response.then().assertThat().body("message",Matchers.equalTo("Succesfully! Record has been deleted."));
-    }
-    */
 }
 
